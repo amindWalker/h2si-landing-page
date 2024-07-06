@@ -545,7 +545,7 @@ export default function App() {
                                     </TableRow>
                                 </TableHeader>
                                 <TableBody>
-                                    {benefits.map(({beneficio, concorrentes, h2}, index) => (
+                                    {benefits.map(({beneficio, h2}, index) => (
                                         <TableRow key={index}>
                                             <TableCell className="max-w-min text-right b-r">{beneficio}</TableCell>
                                             <TableCell className="max-w-min text-center bg-primary/5">{h2}</TableCell>
