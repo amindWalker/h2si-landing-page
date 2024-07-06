@@ -16,56 +16,63 @@ import {
     TableBody,
     TableCaption,
     TableCell,
-    TableFooter,
     TableHead,
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
 
-const invoices = [
+const benefits = [
     {
-        invoice: "INV001",
-        paymentStatus: "Paid",
-        totalAmount: "$250.00",
-        paymentMethod: "Credit Card",
+        beneficio: "Segurança",
+        h2: "Biometria facial, Leitura de placa de veículos, inteligência artificial embarcada.",
+        concorrentes: "(Recursos de segurança dos concorrentes aqui)",
     },
     {
-        invoice: "INV002",
-        paymentStatus: "Pending",
-        totalAmount: "$150.00",
-        paymentMethod: "PayPal",
+        beneficio: "Comodidade",
+        h2: "App de gestão condominial",
+        concorrentes: "(Recursos de comodidade dos concorrentes aqui)",
     },
     {
-        invoice: "INV003",
-        paymentStatus: "Unpaid",
-        totalAmount: "$350.00",
-        paymentMethod: "Bank Transfer",
+        beneficio: "Inteligência artificial",
+        h2: "Biometria facial, Leitura de placa de veículos, inteligência artificial embarcada.",
+        concorrentes: "(Recursos de IA dos concorrentes aqui)",
     },
     {
-        invoice: "INV004",
-        paymentStatus: "Paid",
-        totalAmount: "$450.00",
-        paymentMethod: "Credit Card",
+        beneficio: "Transformação digital",
+        h2: "Seu condomínio no topo da Transformação digital",
+        concorrentes: "(Recursos de transformação digital dos concorrentes aqui)",
     },
     {
-        invoice: "INV005",
-        paymentStatus: "Paid",
-        totalAmount: "$550.00",
-        paymentMethod: "PayPal",
+        beneficio: "Manutenção por assinatura",
+        h2: "Sim",
+        concorrentes: "(Disponibilidade de manutenção por assinatura dos concorrentes aqui)",
     },
     {
-        invoice: "INV006",
-        paymentStatus: "Pending",
-        totalAmount: "$200.00",
-        paymentMethod: "Bank Transfer",
+        beneficio: "App de gestão condominial",
+        h2: "Sim",
+        concorrentes: "(Disponibilidade de app de gestão dos concorrentes aqui)",
     },
     {
-        invoice: "INV007",
-        paymentStatus: "Unpaid",
-        totalAmount: "$300.00",
-        paymentMethod: "Credit Card",
+        beneficio: "Aluguel de equipamentos",
+        h2: "Sim",
+        concorrentes: "(Disponibilidade de aluguel de equipamentos dos concorrentes aqui)",
     },
-]
+    {
+        beneficio: "Soluções integradas",
+        h2: "Sim",
+        concorrentes: "(Disponibilidade de soluções integradas dos concorrentes aqui)",
+    },
+    {
+        beneficio: "Centralização de serviços",
+        h2: "Sim (manutenção de sistemas, vigilância eletrônica, etc.)",
+        concorrentes: "(Centralização de serviços dos concorrentes aqui)",
+    },
+    {
+        beneficio: "Portaria autônoma",
+        h2: "Sim",
+        concorrentes: "(Disponibilidade de portaria autônoma dos concorrentes aqui)",
+    },
+];
 
 function NewsletterForm() {
     const [email, setEmail] = useState("");
@@ -143,9 +150,9 @@ export default function App() {
     }
 
     return (
-        <div className="flex flex-col min-h-screen">
-            <div className="grid">
-                <nav className="sticky top-0 z-10 w-full bg-background bg-op-50 backdrop-blur-lg ">
+        <div className="min-h-screen bg-primary/10">
+            <div className="grid text-center">
+                <nav className="sticky top-0 z-10 w-full bg-background bg-op-50 backdrop-blur">
                     <div className="flex-center h-[60px] px-4">
                         <div className="flex-center space-x-4">
                             <a
@@ -165,12 +172,14 @@ export default function App() {
                         </div>
                     </div>
                 </nav>
-                <main className="bg-primary/10 px-16 <md:px-8 w-screen -mt-16 <md:-mt-8">
-                    <div className="relative w-screen -ml-16 <md:-ml-8">
-                        <img
-                            alt="Hero"
-                            className="object-cover w-full max-h-80vh <md:max-h-40vh"
-                            src="https://images.unsplash.com/photo-1552862750-746b8f6f7f25?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                <main className="px-16 -mt-16 <md:-mt-8 <md:px-8 w-99.4vw place-self-center">
+                    <header className="relative w-99.4vw -ml-16 <md:-ml-8">
+                        <video
+                            autoPlay
+                            muted
+                            loop
+                            className="w-99.4vw h-100vh object-cover"
+                            src="/Renewable_Energy_101.mp4"
                         />
                         <div className="absolute inset-0 backdrop-blur-md flex justify-center items-center p-4 text-center">
                             <div className="space-y-4">
@@ -185,8 +194,8 @@ export default function App() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <section id="solutions" className="w-full py-12 md:py-24 lg:py-32 drop-shadow-xl">
+                    </header>
+                    <section id="solutions" className="max-w-900px mx-auto py-12 md:py-24 lg:py-32 drop-shadow-xl">
                         <div className="grid grid-items-center grid-justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
                             <div className="space-y-3">
                                 <h2 className="text-dark-1 scroll-m-20 border-b pb-2 text-3xl font-extrabold tracking-tight first:mt-0 md:text-5xl">
@@ -462,7 +471,7 @@ export default function App() {
                         </div>
                     </section>
 
-                    <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800 drop-shadow-xl">
+                    <section className="max-w-1200px rounded-xl mx-auto py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800 drop-shadow-xl">
                         <div className="grid grid-items-center grid-justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
                             <div className="space-y-3">
                                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -470,7 +479,7 @@ export default function App() {
                                 </h2>
                             </div>
                             <div className="grid w-full grid-flow-col <md:grid-flow-row grid-cols-center grid-items-start gap-6">
-                                <Card className="max-w-xs">
+                                <Card className="max-w-xs hover:bg-primary/5">
                                     <CardHeader>
                                         <div className="grid grid-place-items-center">
                                             <CardTitle>Velocidade</CardTitle>
@@ -486,7 +495,7 @@ export default function App() {
 
                                     </CardContent>
                                 </Card>
-                                <Card className="max-w-xs">
+                                <Card className="max-w-xs hover:bg-primary/5">
                                     <CardHeader>
                                         <div className="grid grid-place-items-center">
                                             <CardTitle>Segurança</CardTitle>
@@ -502,7 +511,7 @@ export default function App() {
 
                                     </CardContent>
                                 </Card>
-                                <Card className="max-w-xs">
+                                <Card className="max-w-xs hover:bg-primary/5">
                                     <CardHeader>
                                         <div className="grid grid-place-items-center">
                                             <CardTitle>Escalável</CardTitle>
@@ -522,42 +531,30 @@ export default function App() {
                         </div>
                     </section>
 
-                    <section id="prices" className="w-full py-12 md:py-24 lg:py-32 border-t drop-shadow-xl">
-                        <div className="px-4 md:px-6">
-                            <div className="grid gap-10 px-10 md:gap-16">
-                                <div className="space-y-4 grid">
-                                    <h2 className="lg:leading-tight text-3xl text-center font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
-                                        Tenha um produto eficiente e com muitos benefícios
-                                    </h2>
-                                    <Table>
-                                        <TableCaption>Tabela de benefícios</TableCaption>
-                                        <TableHeader>
-                                            <TableRow>
-                                                <TableHead className="w-[100px]">Invoice</TableHead>
-                                                <TableHead>Status</TableHead>
-                                                <TableHead>Method</TableHead>
-                                                <TableHead className="text-right">Amount</TableHead>
-                                            </TableRow>
-                                        </TableHeader>
-                                        <TableBody>
-                                            {invoices.map((invoice) => (
-                                                <TableRow key={invoice.invoice}>
-                                                    <TableCell className="font-medium">{invoice.invoice}</TableCell>
-                                                    <TableCell>{invoice.paymentStatus}</TableCell>
-                                                    <TableCell>{invoice.paymentMethod}</TableCell>
-                                                    <TableCell className="text-right">{invoice.totalAmount}</TableCell>
-                                                </TableRow>
-                                            ))}
-                                        </TableBody>
-                                        <TableFooter>
-                                            <TableRow>
-                                                <TableCell colSpan={3}>Total</TableCell>
-                                                <TableCell className="text-right">$2,500.00</TableCell>
-                                            </TableRow>
-                                        </TableFooter>
-                                    </Table>
-                                </div>
-                                <div className="flex flex-col items-start space-y-4">
+                    <section id="prices" className="max-w-1200px mx-auto py-12 md:py-24 lg:py-32 border-t drop-shadow-xl">
+                        <div className="space-y-4 grid">
+                            <h2 className="lg:leading-tight text-3xl text-center font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+                                Tenha um produto eficiente e com muitos benefícios
+                            </h2>
+                            <Table>
+                                <TableCaption>H2 Sistemas Inteligentes - Tabela de benefícios</TableCaption>
+                                <TableHeader>
+                                    <TableRow>
+                                        <TableHead className="max-w-min text-right b bg-secondary/50">Benefício</TableHead>
+                                        <TableHead className="max-w-min text-center b bg-primary/75 text-white">H2</TableHead>
+                                    </TableRow>
+                                </TableHeader>
+                                <TableBody>
+                                    {benefits.map(({beneficio, concorrentes, h2}, index) => (
+                                        <TableRow key={index}>
+                                            <TableCell className="max-w-min text-right b-r">{beneficio}</TableCell>
+                                            <TableCell className="max-w-min text-center bg-primary/5">{h2}</TableCell>
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </div>
+                        {/* <div className="flex flex-col items-start space-y-4">
                                     <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
                                         Garantia
                                     </div>
@@ -570,9 +567,7 @@ export default function App() {
                                     >
                                         Entenda mais
                                     </a>
-                                </div>
-                            </div>
-                        </div>
+                                </div> */}
                     </section>
                     <div className="bg-gray-100 dark:bg-gray-800">
                         <section id="subscribe" className="w-full py-12 md:py-24 lg:py-32 drop-shadow-xl">
@@ -595,7 +590,7 @@ export default function App() {
                     </div>
                 </main>
             </div>
-            <footer className="w-full py-12">
+            <footer className="w-full py-12 bg-white/50">
                 <div className="flex flex-col items-center justify-center gap-4 text-center md:gap-10 md:flex-row">
                     <p className="text-sm tracking-wide">
                         © 2022 - {getCurrentYear()} H2 Sistemas Inteligentes
