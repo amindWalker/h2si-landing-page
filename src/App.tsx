@@ -531,7 +531,7 @@ export default function App() {
                         </div>
                     </section>
 
-                    <section id="prices" className="max-w-1200px mx-auto py-12 md:py-24 lg:py-32 border-t drop-shadow-xl">
+                    <section id="prices" className="max-w-800px mx-auto py-12 md:py-24 lg:py-32 border-t drop-shadow-xl">
                         <div className="space-y-4 grid">
                             <h2 className="lg:leading-tight text-3xl text-center font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
                                 Tenha um produto eficiente e com muitos benefícios
